@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --color-dark-blackberry: #503459;
+  --color-dusty-purple: #81638b;
+  --color-sheer-lilac: #b695c0;
+  --color-grape-glimmer: #dac9df;
+  --color-white: #ffffff;
+  --color-extra-light-lilac: #f0e8f5;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-white);
+  color: var(--color-dark-blackberry);
+  overflow-x: hidden;
+}
+
+.main-layout {
+  display: flex;
+  background-color: transparent;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 0px 0px 0px 80px;
+  background-color: transparent;
+}
+
+.technologies-used-section {
+  padding: 80px 20px 40px 20px;
+  background-color: var(--color-white);
+  text-align: center;
+  color: var(--color-dark-blackberry);
+}
+
+.technologies-used-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  position: relative;
+  color: var(--color-dark-blackberry);
+}
+
+.technologies-used-section h2::after {
+  content: none;
+}
+
+.technologies-used-section p,
+.technologies-used-section ul {
+  display: none;
+}
+
+.technology-cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.technology-card {
+  width: 250px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.technology-card:hover {
+  transform: scale(1.02);
+}
+
+.technology-card h3 {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--color-dark-blackberry);
+}
+
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.tech-icons svg {
+  width: 40px;
+  height: 40px;
+  fill: var(--color-dusty-purple);
+}
+
+@media (max-width: 768px) {
+  .technologies-used-section {
+    padding: 60px 15px;
+  }
+
+  .technologies-used-section h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+  }
+
+  .technology-cards-container {
+    gap: 20px;
+  }
+
+  .technology-card {
+    max-width: 220px;
+    padding: 25px 15px;
+  }
+
+  .technology-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+
+  .tech-icons svg {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .technologies-used-section {
+    padding: 40px 10px;
+  }
+
+  .technologies-used-section h2 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+
+  .technology-cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .technology-card {
+    width: 90%;
+    padding: 20px;
+    height: auto;
+  }
+
+  .technology-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .tech-icons svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .about-title-section {
+    padding: 0 10px;
+    margin: 20px 0;
+  }
+
+  .about-title-section h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.about-title-section {
+  text-align: center;
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+.about-title-section h1 {
+  font-size: 2.5rem;
+  color: var(--color-dark-blackberry);
+  margin-bottom: 15px;
+}
+
+.main {
+  background-color: transparent;
+}
+
+.main-contact-section {
+  margin-top: -40px;
+}
