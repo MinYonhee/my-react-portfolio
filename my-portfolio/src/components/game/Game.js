@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './Game.css';
 
 export default function Game() {
@@ -9,11 +9,7 @@ export default function Game() {
   const [remainingAttempts, setRemainingAttempts] = useState(10);
   const [gameStatus, setGameStatus] = useState('playing'); 
 
-  useEffect(() => {
-    startNewGame();
-  }, [startNewGame]);
-
-  const generateSecretCode = () => {
+  const generateSecretCode = useCallback(() => {
     const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     let code = '';
     for (let i = 0; i < 4; i++) {
@@ -22,16 +18,20 @@ export default function Game() {
       digits.splice(randomIndex, 1);
     }
     return code;
-  };
+  }, []);
 
-  const startNewGame = () => {
+  const startNewGame = useCallback(() => {
     const newSecretCode = generateSecretCode();
     setSecretCode(newSecretCode);
     setAttempts([]);
     setRemainingAttempts(10);
     setGameStatus('playing');
     setGuessInput('');
-  };
+  }, [generateSecretCode]);
+
+  useEffect(() => {
+    startNewGame();
+  }, [startNewGame]);
 
   const handleInputChange = (event) => {
     const value = event.target.value;
