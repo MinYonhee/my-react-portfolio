@@ -104,19 +104,16 @@
 .hire-button {
     background-color: var(--color-dusty-purple);
     color: var(--color-white);
-    padding: clamp(10px, 2vw, 16px) clamp(24px, 4vw, 40px);
-    border: none;
-    border-radius: 50px;
-    font-size: clamp(13px, 1.8vw, 16px);
+    padding: 16px 40px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0 8px 20px rgba(80, 52, 89, 0.3);
-    margin-bottom: clamp(20px, 4vw, 30px);
-    margin-top: clamp(3px, 1vw, 5px);
+    margin-bottom: 30px;
+    margin-top: 5px;
     transition: all 0.3s ease;
     text-transform: capitalize;
     white-space: nowrap;
-    width: min(280px, 90%);
 }
 
 .hire-button:hover {
