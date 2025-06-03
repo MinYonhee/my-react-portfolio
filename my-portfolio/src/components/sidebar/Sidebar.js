@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import PropTypes from 'prop-types';
 import {
@@ -88,7 +89,7 @@ export default function Sidebar() {
         className={`sidebar-container ${isMenuOpen ? 'open' : ''}`}
       >
         <div className="logo">
-          <img src="/logo.png" alt="Logo" />
+          <Image src="/logo.png" alt="Logo" width={40} height={40} />
         </div>
 
         <nav className="navigation">

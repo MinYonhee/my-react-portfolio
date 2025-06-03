@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Image from 'next/image';
 import {
   FaInstagram,
   FaGithub,
@@ -23,7 +24,7 @@ export default function Home({ contactRef, aboutRef }) {
   return (
     <section className="home-section">
       <div className="home-content">
-        <img src="/perfil.jpg" alt="Beatriz Costa" className="profile-image" />
+        <Image src="/perfil.jpg" alt="Beatriz Costa" className="profile-image" width={150} height={150} />
         <h1 className="name">Beatriz Costa</h1>
         <p className="title">Olá, eu sou uma Desenvolvedora Full-Stack, atualmente trabalhando com Mobile com foco em Front-End e entusiasta de Dados</p>
 

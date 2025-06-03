@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react';
+import Image from 'next/image';
 import './About.css';
 
 const About = forwardRef(({ aboutRef }, ref) => {
@@ -8,7 +9,7 @@ const About = forwardRef(({ aboutRef }, ref) => {
       <div className="about-wrapper">
         <div className="about-left-content">
           <div className="about-image">
-            <img src="/profile.jpg" alt="Beatriz Costa" />
+            <Image src="/profile.jpg" alt="Beatriz Costa" width={190} height={190} />
           </div>
         </div>
         <div className="about-card">
@@ -46,5 +47,7 @@ const About = forwardRef(({ aboutRef }, ref) => {
     </section>
   );
 });
+
+About.displayName = 'About';
 
 export default About;

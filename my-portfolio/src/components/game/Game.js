@@ -11,7 +11,7 @@ export default function Game() {
 
   useEffect(() => {
     startNewGame();
-  }, []);
+  }, [startNewGame]);
 
   const generateSecretCode = () => {
     const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -82,7 +82,7 @@ export default function Game() {
   return (
     <div className="game-container">
       <h2 className="section-title">Jogo da Senha</h2>
-      <p className="game-explanation">Tente adivinhar o código secreto de 4 dígitos únicos. Depois de cada palpite, você receberá "Touros" para dígitos corretos na posição correta e "Vacas" para dígitos corretos em posições erradas. Você tem 10 tentativas.</p>
+      <p className="game-explanation">Tente adivinhar o código secreto de 4 dígitos únicos. Depois de cada palpite, você receberá &quot;Touros&quot; para dígitos corretos na posição correta e &quot;Vacas&quot; para dígitos corretos em posições erradas. Você tem 10 tentativas.</p>
       {gameStatus === 'playing' && (
         <div className="game-input">
           <input
@@ -103,7 +103,7 @@ export default function Game() {
           {gameStatus === 'won' ? (
             <p>Parabéns! Você acertou o código!</p>
           ) : (
-            <p>Fim de Jogo! Você ficou sem tentativas. O código era {secretCode}.</p>
+            <p>{`Fim de Jogo! Você ficou sem tentativas. O código era ${secretCode}.`}</p>
           )}
           <button onClick={startNewGame}>Novo Jogo</button>
         </div>
