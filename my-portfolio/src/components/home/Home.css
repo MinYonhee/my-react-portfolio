@@ -114,6 +114,7 @@
     transition: all 0.3s ease;
     text-transform: capitalize;
     white-space: nowrap;
+    border-radius: 50px;
 }
 
 .hire-button:hover {

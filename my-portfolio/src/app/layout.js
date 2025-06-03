@@ -4,8 +4,8 @@ import Sidebar from '../components/sidebar/Sidebar';
 import Footer from '../components/footer/Footer';
 
 export const metadata = {
-  title: "Bruno Rufino da Costa - Portfolio",
-  description: "Portfolio pessoal de Bruno Rufino da Costa",
+  title: "Beatriz Costa - Portfolio",
+  description: "Portfolio pessoal de Beatriz Costa",
 };
 
 export default function RootLayout({ children }) {
